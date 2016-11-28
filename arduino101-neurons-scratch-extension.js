@@ -449,31 +449,31 @@
   };
 
   var blocks = [
-    ['h', 'when device is connected', 'whenConnected'],
-    [' ', 'connect %m.hwIn to analog %n%', 'connectHW', 'rotation knob', 0],
+    ['h', '当设备连接时', 'whenConnected'],
+    [' ', '连接 %m.hwIn 到信号管脚%n%', 'connectHW', 'rotation knob', 0],
     ['-'],
-    ['h', 'when %m.hwIn %m.ops %n%', 'whenInput', 'rotation knob', '>', 50],
-    ['r', 'read %m.hwIn', 'readInput', 'rotation knob'],
+    ['h', '当 %m.hwIn %m.ops %n%', 'whenInput', 'rotation knob', '>', 50],
+    ['r', '读 %m.hwIn', 'readInput', 'rotation knob'],
     ['-'],
-    [' ', 'Neurons_read  %d.digitalOutputs','neurons_learn',13],
-	[' ', 'train motion to neurons by %d.digitalOutputs', 'read_neurons', 13],
+    [' ', '读取动作神经元 %d.digitalOutputs  ','neurons_learn',13],
+	[' ', '训练动作神经元  %d.digitalOutputs', 'read_neurons', 13],
 	['-'],
-    [' ', 'Neurons_regnize %d.analogInputs %d.digitalOutputs','neurons_regnize','A0',13],
-	[' ', 'train  %d.analogInputs to neurons by %d.digitalOutputs', 'neurons_train', 'A0',13],
+    [' ', '读取信号管脚%d.analogInputs 的神经元 %d.digitalOutputs','neurons_regnize','A0',13],
+	[' ', '将信号管脚  %d.analogInputs 训练到神经元 by %d.digitalOutputs', 'neurons_train', 'A0',13],
 	['-'],
-    [' ', 'set pin %d.digitalOutputs %m.outputs', 'digitalWrite', 13, 'on'],
-    [' ', 'set pin %d.analogOutputs to %n%', 'analogWrite', 9, 100],
-    ['h', 'when pin %d.digitalInputs is %m.outputs', 'whenDigitalRead', 9, 'on'],
-    ['b', 'pin %d.digitalInputs on?', 'digitalRead', 9],
+    [' ', '设置电平管脚 %d.digitalOutputs %m.outputs', 'digitalWrite', 13, 'on'],
+    [' ', '设置电平管脚 %d.analogOutputs 为 %n%', 'analogWrite', 9, 100],
+    ['h', '当电平管脚 %d.digitalInputs 为 %m.outputs', 'whenDigitalRead', 9, 'on'],
+    ['b', '管脚 %d.digitalInputs 开启?', 'digitalRead', 9],
     ['-'],
-    ['h', 'when analog pin %d.analogInputs %m.ops %n%', 'whenAnalogRead', 'A0', '>', 50],
-    ['r', 'read analog pin %d.analogInputs', 'analogRead', 'A0'],
+    ['h', '当信号管脚 %d.analogInputs %m.ops %n%', 'whenAnalogRead', 'A0', '>', 50],
+    ['r', '读信号管脚 pin %d.analogInputs', 'analogRead', 'A0'],
     ['-'],
-    ['h', 'when shaken', 'whenIMUEvent'],
-    ['r', 'tilt angle %m.tiltDir', 'getTilt', 'up'],
+    ['h', '当抖动时', 'whenIMUEvent'],
+    ['r', '角度 %m.tiltDir ', 'getTilt', 'up'],
     ['-'],
-    [' ', 'set pin %d.digitalOutputs servo to %n degrees', 'rotateServo', 7, 90],
-    ['r', 'pin %d.digitalOutputs servo position', 'servoPosition', 7]
+    [' ', '设置电平管脚 %d.digitalOutputs 的程度为 %n degrees', 'rotateServo', 7, 90],
+    ['r', 'pin %d.digitalOutputs 电机状态', 'servoPosition', 7]
   ];
 
   var menus = {
@@ -492,7 +492,7 @@
   var descriptor = {
     blocks: blocks,
     menus: menus,
-    url: 'http://rxhn.github.io/test.js/test.js'
+    url: 'https://xmu-maker.github.io/scratch-arduino101-neurons-ext/arduino101-neurons-scratch-extension.js'
   };
 
   ScratchExtensions.register('Arduino 101', descriptor, ext, {type: 'serial'});
