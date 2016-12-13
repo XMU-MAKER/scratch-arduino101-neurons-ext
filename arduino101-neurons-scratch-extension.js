@@ -466,7 +466,7 @@
     ['h', '当电平管脚 %d.digitalInputs 为 %m.outputs', 'whenDigitalRead', 9, 'on'],
     ['b', '管脚 %d.digitalInputs 开启?', 'digitalRead', 9],
     ['-'],
-    ['h', '当信号管脚 %d.analogInputs %m.ops %n%', 'whenAnalogRead', 'A0', '>', 50],
+    ['h', '当信号管脚 %d.analogInputs %m.ops %n', 'whenAnalogRead', 'A0', '>', 50],
     ['r', '读信号管脚 pin %d.analogInputs', 'analogRead', 'A0'],
     ['-'],
     ['h', '当抖动时', 'whenIMUEvent'],
