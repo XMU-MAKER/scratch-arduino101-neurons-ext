@@ -50,8 +50,8 @@
     CMD_IMU_EVENT = 0x7B,
     CMD_PING = 0x7C,
     CMD_PING_CONFIRM = 0x7D;
-    CMD_NEURONS_LEARN = 0x71;
-    CMD_READ_NEURONS = 0x72;
+    CMD_NEURONS_LEARN = 0x72;
+    CMD_READ_NEURONS = 0x71;
 	CMD_NEURONS_TRAIN = 0x7E;
     CMD_NEURONS_REGNIZE = 0x7F;
 	
@@ -455,18 +455,18 @@
     ['h', '当 %m.hwIn %m.ops %n%', 'whenInput', 'rotation knob', '>', 50],
     ['r', '读 %m.hwIn', 'readInput', 'rotation knob'],
     ['-'],
-    [' ', '读取动作神经元 %d.digitalOutputs  ','neurons_learn',13],
-	[' ', '训练动作神经元  %d.digitalOutputs', 'read_neurons', 13],
-	['-'],
+    [' ', '读取动作神经元 %d.digitalOutputs  ','read_neurons',13],
+    [' ', '训练动作神经元  %d.digitalOutputs', 'neurons_learn', 13],
+    ['-'],
     [' ', '读取信号管脚%d.analogInputs 的神经元 %d.digitalOutputs','neurons_regnize','A0',13],
-	[' ', '将信号管脚  %d.analogInputs 训练到神经元 by %d.digitalOutputs', 'neurons_train', 'A0',13],
-	['-'],
+    [' ', '将信号管脚  %d.analogInputs 训练到神经元 by %d.digitalOutputs', 'neurons_train', 'A0',13],
+    ['-'],
     [' ', '设置电平管脚 %d.digitalOutputs %m.outputs', 'digitalWrite', 13, 'on'],
     [' ', '设置电平管脚 %d.analogOutputs 为 %n%', 'analogWrite', 9, 100],
     ['h', '当电平管脚 %d.digitalInputs 为 %m.outputs', 'whenDigitalRead', 9, 'on'],
     ['b', '管脚 %d.digitalInputs 开启?', 'digitalRead', 9],
     ['-'],
-    ['h', '当信号管脚 %d.analogInputs %m.ops %n%', 'whenAnalogRead', 'A0', '>', 50],
+    ['h', '当信号管脚 %d.analogInputs %m.ops %n', 'whenAnalogRead', 'A0', '>', 50],
     ['r', '读信号管脚 pin %d.analogInputs', 'analogRead', 'A0'],
     ['-'],
     ['h', '当抖动时', 'whenIMUEvent'],
