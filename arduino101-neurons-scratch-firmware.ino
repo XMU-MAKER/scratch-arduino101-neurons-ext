@@ -53,8 +53,8 @@ const byte CMD_IMU_READ = 0x7A;
 const byte CMD_IMU_EVENT = 0x7B;
 const byte CMD_PING = 0x7C;
 const byte CMD_PING_CONFIRM = 0x7D;
-const byte CMD_NEURONS_LEARN = 0x71;
-const byte CMD_READ_NEURONS = 0x72;
+const byte CMD_NEURONS_LEARN = 0x72;
+const byte CMD_READ_NEURONS = 0x71;
 const byte CMD_NEURONS_TRAIN = 0x7E;
 const byte CMD_NEURONS_REGNIZE = 0x7F;
 
