@@ -272,7 +272,7 @@ void processCommand(byte inputData[]) {
       setMode(pin, OUTPUT);
     digitalWrite(pin, val);
     /*训练神经元*/
-  }else if(cmd == CMD_READ_NEURONS) {
+  }else if(cmd == CMD_NEURONS_LEARN) {
     const int digitalInpin = inputData[1];
     catL = digitalRead(digitalInpin);
     catL=1+catL;    
@@ -287,7 +287,7 @@ void processCommand(byte inputData[]) {
       } 
       
            
-  }else if(cmd == CMD_NEURONS_LEARN ){
+  }else if(cmd == CMD_READ_NEURONS ){
      const int digitalInpin = inputData[1];
    // Recognize
       extractFeatureVector(); // the vector array is a global
